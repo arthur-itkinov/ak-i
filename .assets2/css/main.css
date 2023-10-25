@@ -340,6 +340,47 @@ a {
   animation: move-clouds-back 200s linear infinite;
 }
 
+.fog-floating,
+.fog-floating1 {
+  position: absolute;
+  height: 50vh;
+  width: 300vw;
+  bottom: 0;
+}
+
+.fog-floating {
+  background: url("https://www.aktivkredit.ru/ac/assets/img/clouds.png") repeat-x;
+  -webkit-animation: fog 160s linear infinite;
+  animation: fog 160s linear infinite;
+}
+
+.fog-floating1 {
+  background: url("https://www.aktivkredit.ru/ac/assets/img/clouds.png") repeat-x;
+  -webkit-animation: fog 240s linear infinite;
+  animation: fog 240s linear infinite;
+}
+
+@-webkit-keyframes fog {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-200vw, 0, 0);
+    transform: translate3d(-200vw, 0, 0);
+  }
+}
+
+@keyframes fog {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-200vw, 0, 0);
+    transform: translate3d(-200vw, 0, 0);
+  }
+}
 .burger {
   display: none;
 }
@@ -409,6 +450,7 @@ a {
   top: 0;
   padding: 22px 0;
   width: 100%;
+  z-index: 10000;
 }
 .header__container {
   display: -webkit-box;
@@ -453,6 +495,7 @@ a {
 }
 
 .hero {
+  position: relative;
   padding-top: 35dvh;
   min-height: 100dvh;
   background-color: var(--dark-color);
